@@ -1,19 +1,14 @@
 import java.util.Scanner;
 
 public class Zadacha2 {
-    private static Scanner sc;
     public static void main(String[] args) {
 
-        int number;
-        sc = new Scanner(System.in);
+        int a = 35;
+        boolean number = (a % 5)==0 && (a % 7)==0;
 
-        System.out.print("Please Enter a Number That Can Be Divisible By 5 And 7");
-        number = sc.nextInt();
+        System.out.println(number);
 
-        if((number % 5 == 0) && (number % 7 == 0));
-        {
-            System.out.println("\n Given number " + " is Divisible By 5 and 7");
         }
 
     }
-}
+
