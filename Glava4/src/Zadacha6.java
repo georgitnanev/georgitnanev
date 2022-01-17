@@ -3,13 +3,17 @@ import java.util.Scanner;
 public class Zadacha6 {
     public static void main(String[] args) {
 
-        int a = 5;
-        int b = 6;
-        int c = 7;
-        int d = 8;
-        int e = 9;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int sum = 0;
 
-        System.out.println("The sum is: " + (a + b +c + d + e));
+        for (int i = 1; i < 5 ; i++) {
+            int number = scanner.nextInt();
+            sum += number;
+
+        }
+
+        System.out.println(sum);
 
 
     }
