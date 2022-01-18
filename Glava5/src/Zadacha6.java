@@ -13,5 +13,6 @@ public class Zadacha6 {
                 }
             }
             System.out.println("The biggest number is: " + theBiggestnum);
+
     }
 }
