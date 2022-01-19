@@ -3,19 +3,21 @@ import java.util.Scanner;
 public class Zadacha2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int first = scanner.nextInt();
-        int second = scanner.nextInt();
-        int result = first / second;
+        double first = scanner.nextDouble();
+        double second = scanner.nextDouble();
+        double result = first / second;
 
-        if(result > 0) {
-            System.out.println("+");
-
+        if(first < 0 && second < 0) {
+            System.out.println("The result is: +");
         }
-        if (result < 0) {
-            System.out.println("-");
-        } else {
-            System.out.println("Zero");
-
+        if (first > 0 && second > 0) {
+            System.out.println("The result is: +");
+        }
+        if (first < 0 && second > 0) {
+            System.out.println("The result is: -");
+        }
+        if (first > 0 && second < 0) {
+            System.out.println("The result is: -");
         }
     }
 }

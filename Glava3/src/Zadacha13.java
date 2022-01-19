@@ -5,17 +5,22 @@ public class Zadacha13 {
         Scanner scanner = new Scanner(System.in);
 
         int n = scanner.nextInt();
-        boolean simpleNum = n >= 2;
+        boolean simpleNum = n >=2;
+
 
         for (int i = 2; i <= Math.sqrt(n) ; i++) {
             if (n % i == 0) {
                 simpleNum = false;
             }
+        }
 
             if (simpleNum) {
                 System.out.println("Simple number");
-            } else  {
+
+            } else {
                 System.out.println("Not simple number");
+
+
             }
 
 
@@ -23,4 +28,4 @@ public class Zadacha13 {
 
 
     }
-}
+
