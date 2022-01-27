@@ -17,10 +17,12 @@ public class Zadacha4 {
             array[i] = scanner.nextInt();
         }
         for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] == array[i + 1]) maxLength++;
-            else maxLength = 1;
+            if (array[i] == array[i + 1]) {
+                maxLength++;
+            } else {
+                maxLength = 1;
 
-            if (maxLength > bestStart) {
+            } if (maxLength > bestStart) {
                 bestStart = maxLength;
                 number = array[i];
             }

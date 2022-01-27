@@ -3,44 +3,25 @@ import java.util.Scanner;
 
 public class Zadacha2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in);
 
-        boolean arraysEqual = true;
-        System.out.println("Enter length of first array: ");
-        int length = scanner.nextInt();
-        int arrayOne[] = new int[length];
+            int[] arrayOne = {1,2,3,4};
+            int[] arrayTwo = {1,2,3,4};
 
-        for (int i = 0; i < arrayOne.length; i++) {
-            arrayOne[i] = scanner.nextInt();
+            boolean arraysEqual = true;
+            if (arrayOne.length == arrayTwo.length) {
 
-            System.out.println("Enter element: " + i);
-        }
-        System.out.println("Enter length of second array: ");
-
-        if (length != scanner.nextInt()) {
-            System.out.println("Arrays have diff lengths");
-        } else {
-
-            int arrayTwo[] = new int[length];
-
-            for (int j = 0; j < arrayTwo.length; j++) {
-                arrayTwo[j] = scanner.nextInt();
-                System.out.println("Enter element: " + j);
-            }
-            for (int i = 0; i < arrayOne.length; i++) {
-                for (int j = 0; j < arrayTwo.length; j++) {
-
-
-                    if (arrayOne[i] != arrayTwo[j]) {
-                        System.out.println("Arrays are not equal");
-                        arraysEqual = false;
-                        break;
-                    } else {
-                        System.out.println("Arrays are equal");
-                    }
-                }
-            }
-        }
-        }
-
+            for (int i = 0; i <= arrayOne.length-1; i++) {
+                if (arrayOne[i] != arrayTwo[i]) {
+                    arraysEqual = false; }
+                      }
+                } else {
+                    System.out.println("Arrays are not equal: ");
+                } if (arraysEqual) {
+                    System.out.println("Arrays are equal: " + arraysEqual);
+                } else {
+                    System.out.println("Arrays have different length");
 }
+}
+}
+

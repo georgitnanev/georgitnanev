@@ -7,5 +7,6 @@ public class Zadacha5 {
         Object obj = Hello + " " + World;
 
         String Str = (String) obj;
+        System.out.println(obj);
     }
 }

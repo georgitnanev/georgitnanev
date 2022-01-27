@@ -7,7 +7,7 @@ public class Zadacha7 {
 
         int weightNumber;
 
-        System.out.println("How much do I weigh on the Earth:");
+        System.out.println("Enter number: ");
          weightNumber = input.nextInt();
 
 

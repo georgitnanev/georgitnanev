@@ -2,19 +2,25 @@ import java.util.Scanner;
 
 public class Zadacha5 {
     public static void main(String[] args) {
+
+        int n;
+        int a = 0;
+        int b = 1;
+
+        System.out.println("n=");
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
 
-        int f0 = 1;
-        int f1 = 1;
+        System.out.print("First" + n + "Fibo numbers are: ");
+        System.out.println(a + " " +b);
 
-        for (int i = 0; i < n-1; i++) {
-            int nF = f0 + f1;
-            f0 = f1;
-            f1 = nF;
-
+        for (int i = 1; i <= n -2 ; i++) {
+            int sum = a + b;
+            a = b;
+            b = sum;
+            System.out.print(" "+sum);
         }
-        System.out.println(f1);
+
 
     }
 }
