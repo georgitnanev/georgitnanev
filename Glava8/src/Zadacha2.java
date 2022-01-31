@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zadacha13 {
+public class Zadacha2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -28,3 +28,6 @@ public class Zadacha13 {
         System.out.println("Decimal number: " +decimalNumber);
     }
 }
+
+
+

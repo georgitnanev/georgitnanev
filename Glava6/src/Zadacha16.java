@@ -1,16 +1,18 @@
 import java.util.Random;
-import java.util.random.RandomGenerator;
+import java.util.Scanner;
 
 public class Zadacha16 {
-    public static void main(String[] args) {
-        Random dice = new Random();
-        int number;
 
-        for (int count = 1; count <= 10 ; count++) {
-            number = 1+dice.nextInt(6);
-            System.out.println(number +" ");
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        Random number = new Random();
+
+        int n = scanner.nextInt();
+
+            System.out.println(number.nextInt(n)+1);
 
         }
 
+
     }
-}

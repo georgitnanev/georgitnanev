@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Zadacha6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Array length: ");
+        System.out.println("Enter N: ");
         int n = scanner.nextInt();
         int[] array = new int[n];
-        System.out.print("Elements: ");
+        System.out.print("Enter K: ");
         int k = scanner.nextInt();
         int sum = array[0];
         int sum2 = 0;
@@ -17,7 +17,7 @@ public class Zadacha6 {
             System.out.print("Element number " + i + " = ");
             array[i] = scanner.nextInt();
         }
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 1; i < array.length; i++) { // todo for m
             for (int j = 0; j < k; j++) {
                 sum = array[i - 1] + array[i];
             }

@@ -4,23 +4,28 @@ public class Zadacha10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        int row = 1;
-        int col = 0;
+        System.out.println("Enter N: ");
 
-        for (col = 0; col < n; col++) {
-            System.out.print(" ");
-        }
+        int x = scanner.nextInt();
+        int array[][] = new int[x][x];
+        int countRow = 0;
+        for (int i = 0; i < x; i++) {
+            countRow++;
+            int countCol = countRow;
+            for (int j = 0; j < x; j++) {
+                array[i][j] = countCol;
+                countCol++;
 
-        for (row = row + 1; row <= col + n; row++) {
-            if (row < 10) {
-
-                System.out.print(row + " ");
             }
-            System.out.println();
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(" ");
+            for (int j = 0; j < array.length; j++) {
+                System.out.print(array[i][j]+ " ");
+
+            }
+
         }
     }
 }
-
-
 

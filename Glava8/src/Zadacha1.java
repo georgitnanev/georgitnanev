@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zadacha12 {
+public class Zadacha1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number on tennumeric: ");
@@ -27,3 +27,4 @@ public class Zadacha12 {
         }
     }
 }
+

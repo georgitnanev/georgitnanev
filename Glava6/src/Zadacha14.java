@@ -13,7 +13,7 @@ public class Zadacha14 {
 
         while (decimal>0) {
             reminder = decimal % 16;
-            hexaValue = hexa[reminder]+hexaValue;
+            hexaValue = hexa[reminder] + hexaValue;
             decimal=decimal/16;
         }
         System.out.println("Hexa value: " + hexaValue);

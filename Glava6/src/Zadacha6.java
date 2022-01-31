@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Zadacha6 {
@@ -6,15 +7,21 @@ public class Zadacha6 {
         int n = scanner.nextInt();
         int k = scanner.nextInt();
 
-        for (int i = n - 1; i > 0; i--) {
+        for (int i = n -1; i > 0; i--) {
             n *= i;
 
         }
 
-        for (int i = k - 1; i > 0; i--) {
-
+        for (int i = k -1; i > 0; i--) {
+            k *= i;
         }
-        n /= k;
-        System.out.println("Result is: " + n);
+
+        System.out.println("N: " +n);
+        System.out.println("K: " +k);
+        if(1<k&&k<n) {
+            System.out.println("N!/K! = " +n/k);
+        } else  {
+            System.out.println("1<K<N false");
+        }
     }
 }
