@@ -1,44 +1,33 @@
 public class Zadacha3 {
     public static void main(String[] args) {
-        char[] array = { 'a', 'b', 'c', 'd', 'e' };
-        char[] array2 = { 'a', 'b', 'c', 'd' };
+
         boolean equal = true;
-        int count1 = 0;
-        int count2 = 0;
-        for (int i = 0; i <= array.length - 1; i++) {
-            if (i < array.length - 1) {
-                if (array[i] < array[i + 1]) {
-                    count1++;
-                } else {
+        char[] array = {'a', 'b', 'c', 'd', 'e'};
+        char[] array2 = {'a', 'b', 'c', 'd','e','f'};
+
+        if (array.length > array2.length)
+            System.out.println("Second array is first");
+        else if (array.length < array2.length)
+            System.out.println("First array is first");
+        else {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] < array2[i]) {
+                    System.out.println("First array is first");
+                    equal = false;
                     break;
                 }
-            } else {
-                break;
-            }
-            if (i < array2.length - 1) {
-                if (array2[i] < array2[i + 1]) {
-                    count2++;
-                } else {
+                if (array[i] > array2[i]) {
+                    System.out.println("Second array is first");
+                    equal = false;
                     break;
                 }
-            } else {
-                break;
             }
-        }
-        System.out.println("Array 1: " + count1+" ");
-        System.out.println("Array 2: " + count2+" ");
-        if(count1<count2){
-            System.out.println("array 1 is first");
-        }
-        else{
-            System.out.println("array2 is first");
-        }
+            if (equal)
+                System.out.println("Arrays are equal");
 
-
+        }
     }
 }
-
-
 
 
 

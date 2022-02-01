@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Zadacha6 {
@@ -8,6 +9,7 @@ public class Zadacha6 {
         int[] array = new int[n];
         System.out.print("Enter K: ");
         int k = scanner.nextInt();
+
         int sum = array[0];
         int sum2 = 0;
         int a = array[0];
@@ -17,7 +19,7 @@ public class Zadacha6 {
             System.out.print("Element number " + i + " = ");
             array[i] = scanner.nextInt();
         }
-        for (int i = 1; i < array.length; i++) { // todo for m
+        for (int i = 1; i < array.length; i++) {
             for (int j = 0; j < k; j++) {
                 sum = array[i - 1] + array[i];
             }
@@ -30,6 +32,8 @@ public class Zadacha6 {
         System.out.print("\n");
         System.out.print("Max sum is from elements: ");
         for (int i = k-1; i > 0 ; i--) {
+            Arrays.sort(array);
+            System.out.println(Arrays.toString(array));
             System.out.print(array[a-i]+", ");
 
         }

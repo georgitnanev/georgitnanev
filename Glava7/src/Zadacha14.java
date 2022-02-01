@@ -1,10 +1,9 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Zadacha14 {
     public static void main(String[] args) {
         int[] array = {8,7,6,5,4,3,2,7,6,5};
 
-        int n = 0;
 
         int firstOneIndex = 0;
         int firstLastIndex = array.length - 1;
@@ -28,6 +27,7 @@ public class Zadacha14 {
             countRight++;
 
         }
+        Arrays.sort(array);
         System.out.println(java.util.Arrays.toString(array));
         System.out.println(java.util.Arrays.toString(left));
         System.out.println(java.util.Arrays.toString(right));

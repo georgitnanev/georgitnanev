@@ -68,10 +68,10 @@ public class Zadacha11 {
                 System.out.println("Max X: " + x);
                 System.out.println("MAx Y: " + y);
                 System.out.println();
-                for (int row = x - 2; row < matrix.length ; row++) {
-                    for (int col = y - 2; col < matrix[0].length; col++) {
+                for (int row = x + 2; row < matrix.length ; row++) {
+                    for (int col = y + 2; col < matrix[0].length; col++) {
 
-                        System.out.printf("%d " + matrix[row][col]);
+                        System.out.print(+ matrix[row][col]);
                     }
                     System.out.println();
 
