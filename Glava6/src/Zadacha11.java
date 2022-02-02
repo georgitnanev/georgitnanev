@@ -6,21 +6,23 @@ public class Zadacha11 {
 
         System.out.println("N: ");
         long n = scanner.nextInt();
+        long sum = n;
 
-        int zero = 0;
+        for (long i = n; i > 1; i--) {
+            sum *= ((i-1)); }
 
-        for (long i = n-1; i > 0; i--) {
-            n *= i;
-            System.out.println("N!: " + n);
+            n = sum;
+            System.out.println(n);
+
+            int zero = 0;
+        for (long j = n; j % 5 == 0; j/=5) {
+            zero++;
 
         }
-        do {
-            n /= 10;
-            zero++;
-        } while (n % 10 == 0);
-        System.out.println("with " + zero +  " zeroes");
 
+                System.out.println("with " + zero + " zero(es)");
 
 
     }
-}
+
+    }
