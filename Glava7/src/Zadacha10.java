@@ -2,28 +2,31 @@ import java.util.Scanner;
 
 public class Zadacha10 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the n");
+        int n = scan.nextInt();
+        if(n>0) {
+        int[][] arr = new int[n][n];
+        int[][] a = new int[n][n];
+        int row;
+        int col;
 
-        System.out.print("Enter N: ");
-        int n = scanner.nextInt();
-        System.out.print("Enter M: ");
-        int m = scanner.nextInt();
-
-        int array[][] = new int[n][m];
-        int countRow = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                System.out.println("Enter array[" +i+ "][" +j+ "]");
-                array[i][j] = scanner.nextInt();
+        for (int i = 0; i < n*n; i++) {
+            row = i % n;
+            col = i / n;
+            a[row][col] = i +1;
             }
-        }
-        for (int row = 0; row < array.length; row++) {
-            for (int col = 0; col < array.length; col++) {
-                System.out.printf(" %d ",array[row][col]);
+                System.out.println(a);
 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println("Enter the arr[" + i + "][" + j + "]");
             }
-
+            }
+            System.out.println();
         }
     }
+
 }
+
 
