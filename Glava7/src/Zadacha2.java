@@ -1,9 +1,6 @@
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Zadacha2 {
     public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
 
             int[] arrayOne = {1,2,3,4,5};
             int[] arrayTwo = {1,2,3,4};
@@ -15,12 +12,10 @@ public class Zadacha2 {
                     if (arrayOne[i] != arrayTwo[i]) {
                         arraysEqual = false;
                     }
-
                 }
             } else {
                 System.out.println("Arrays have different lengths");
                 return;
-
             }
             if (arraysEqual) {
                 System.out.println("Arrays are equal: " + arraysEqual);

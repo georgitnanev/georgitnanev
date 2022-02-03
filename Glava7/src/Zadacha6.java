@@ -18,26 +18,18 @@ public class Zadacha6 {
         for (int i = 0; i < array.length; i++) {
             System.out.print("Element number " + i + " = ");
             array[i] = scanner.nextInt();
-        }
-        for (int i = 1; i < array.length; i++) {
-            for (int j = 0; j < k; j++) {
-                sum = array[i - 1] + array[i];
-            }
-            if (sum > sum2) {
-                sum2 = sum;
-                a = i;
-            }
-            sum = 0;
+
          }
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
         System.out.print("\n");
         System.out.print("Max sum is from elements: ");
-        for (int i = k-1; i > 0 ; i--) {
-            Arrays.sort(array);
-            System.out.println(Arrays.toString(array));
-            System.out.print(array[a-i]+", ");
+        for (int i = n-1; i > k ; i--) {
+
+            System.out.print(array[i]+", ");
 
         }
-        System.out.print(array[a]);
+
 
     }
 }

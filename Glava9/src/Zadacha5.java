@@ -13,7 +13,7 @@ public class Zadacha5 {
                         + " is higher from the previous");
             } else {
                 System.out
-                        .println("The previous or the last element is ot of array");
+                        .println("The previous or the last element is from array");
 
             }
         }
@@ -31,14 +31,14 @@ public class Zadacha5 {
                             + " is higher from the previous");
                 } else {
                     System.out
-                            .println("The previous or the last element is ot of array");
+                            .println("The previous or the last element is from array");
                 }
             }
         }
     }
 
     public static void main(String[] args) {
-        int positionOnArray = 1;
+        int positionOnArray = 0;
         int[] array = { 1, 2, 3, 2, 5, 6, 7, 8, 9, 0 };
 
         positionOfElement(positionOnArray, array);

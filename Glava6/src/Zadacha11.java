@@ -9,7 +9,8 @@ public class Zadacha11 {
         long sum = n;
 
         for (long i = n; i > 1; i--) {
-            sum *= ((i-1)); }
+            sum *= ((i-1));
+        }
 
             n = sum;
             System.out.println(n);
