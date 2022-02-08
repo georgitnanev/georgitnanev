@@ -1,24 +1,21 @@
 import java.util.Scanner;
 
 public class Zadacha4 {
-    public static String[] strings, stringOne;
+    public static String[] strings, str;
     public static int length;
 
 
-    public static void cycle(int iter, int subject, int k) {
-        if (iter == k) {
+    public static void cycle(int iteration, int index, int k) {
+        if (iteration == k) {
             for (int i = 0; i < length; i++)
-                System.out.print("()" + stringOne[i]);
+                System.out.print("()" + str[i]);
             return;
-
         }
-        for (int i = subject; i < strings.length; i++) {
-            stringOne[iter] = strings[i];
-            cycle(iter + 1, i + 1, k);
-
+        for (int i = index; i < strings.length; i++) {
+            str[iteration] = strings[i];
+            cycle(iteration + 1, i + 1, k);
         }
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter words length: ");
@@ -27,12 +24,12 @@ public class Zadacha4 {
         strings = new String[length];
 
         for (int i = 0; i < length; i++) {
-            System.out.print("Enter word: ");
+            System.out.print("Enter word: " +i+1);
             strings[i] = scanner.next();
 
         }
         for (int i = 0; i < length; i++) {
-            stringOne = new String[length];
+            str = new String[length];
             cycle(0, 0, i);
 
         }

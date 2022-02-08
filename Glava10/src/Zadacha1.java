@@ -5,18 +5,21 @@ public class Zadacha1 {
     static void Combos(int[] array, int index, int begin, int finish) {
         if (index >= array.length) {
             System.out.print("(");
-            for (int j = 0; j < array.length; j++)
-                if (j < array.length - 1)
-                    System.out.print(array[j] +" ");
-            else
-            System.out.print(array[j]);
+            for (int j = 0; j < array.length; j++) {
+                if (j < array.length - 1) {
+                    System.out.print(array[j] + " ");
+                } else {
+                    System.out.print(array[j]);
+                }
+            }
 
             System.out.print("),");
-        } else
+        } else {
             for (int j = begin; j <= finish; j++) {
                 array[index] = j;
                 Combos(array, index + 1, j, finish);
             }
+        }
     }
     public static void main (String[]args) {
 

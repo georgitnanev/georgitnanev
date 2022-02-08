@@ -1,38 +1,35 @@
 import java.util.Scanner;
 
 public class Zadacha7 {
+    static boolean isSubSetSum(int set[], int n, int sum) {
+        if (sum == 0)
+            return true;
+        if (n == 0)
+            return false;
+        if (set[n - 1] > sum)
+            return isSubSetSum(set, n - 1, sum);
 
-    static String[] wordsArray;
-    static void symbolString(int[] array, int index, int begin, int finish) {
-        if (index >= array.length) {
-            System.out.print("(");
-            for (int j = 0; j < array.length; j++) {
-                System.out.print("" + wordsArray[array[j]] + " ");
-                if (j != array.length - 1)
-                    System.out.print(" ");
-            }
-            System.out.print("),");
-        }
-        else
-            for (int j = begin; j < finish; j++) {
-                array[index] = j;
-                symbolString(array, index + 1 , j + 1, finish);
-            }
+        return isSubSetSum(set, n - 1, sum) || isSubSetSum(set, n - 1, sum - set[n - 1]);
+
     }
-    public static void main (String[]args) {
+
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length: ");
         int length = scanner.nextInt();
-        wordsArray = new String[length];
-        System.out.println();
-        for (int j = 0; j < wordsArray.length; j++) {
-            System.out.print("strings = " + j);
-            wordsArray[j] = scanner.next();
+        int[] array = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            System.out.println("Enter element: ");
+            array[i] = scanner.nextInt();
         }
-        System.out.println("Enter K: ");
-        int k = scanner.nextInt();
-        int[] array = new int[k];
-        System.out.println();
-        symbolString(array,0,0,length);
+        System.out.println("Enter sum: ");
+        int sum = scanner.nextInt();
+        if (isSubSetSum(array, array.length, sum) == true) {
+            System.out.println("Found a subset with the given sum");
+        } else {
+            System.out.println("No subset with the given sum");
+            System.out.println();
+        }
     }
 }

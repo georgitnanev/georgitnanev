@@ -14,6 +14,7 @@ public class Zadacha1 {
     }
 
     public static void printName(String enterName) {
+
         System.out.println("Hello, " + enterName + "!");
     }
 

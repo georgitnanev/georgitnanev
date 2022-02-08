@@ -7,19 +7,23 @@ public class Zadacha5 {
             int[] b = new int[right + 1];
 
             for (i = left, j = mid + 1; i <= mid && j <= right; c++) {
-                if (array[i] <= array[j])
+                if (array[i] <= array[j]) {
                     b[c] = array[i++];
-                else
+                } else {
                     b[c] = array[j++];
+                }
             }
-            while (i <= mid)
+            while (i <= mid) {
                 b[c++] = array[i++];
+            }
 
-            while (j <= right)
+            while (j <= right) {
                 b[c++] = array[j++];
+            }
 
-            for (i = left; i <= right; i++)
+            for (i = left; i <= right; i++) {
                 array[i] = b[i];
+            }
         }
 
         public static void Sort(int[] array, int left, int right) {
