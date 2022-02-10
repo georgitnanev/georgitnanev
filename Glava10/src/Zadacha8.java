@@ -1,40 +1,37 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Zadacha8 {
-    public static void set(int[] temp,int sum){
-        int n=temp.length;
-
-        for (int i = 0; i < (1<<n); i++)
-        {  int sumTwo=0;
-            int count=0;
-            for (int j = 0; j < n; j++)
-
-                if ((i & (1 << j)) > 0) {
-                    System.out.print(temp[j] + " ");
-                    sumTwo=sumTwo+temp[j];
-                    count++;
-                }
-            if(sum==sumTwo){
-                System.out.println(" = "+" sum :"+sumTwo +" with "+count+" element(s)");
-            } else {
-                System.out.println(",");
-            }
-        }
-    }
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter size of array : ");
-        int n=sc.nextInt();
-        int[] a=new int[n];
-        int sum;
-        for(int i=0;i<n;i++)
-        {
-            System.out.print("Enter "+i+" element value of array : ");
-            a[i]=sc.nextInt();
+    static void printAllSubsetsRecursively(int [] array, int n, Vector<Integer>s ,
+                                   int sum)
+    {
+        if (sum == 0) {
+            for (Integer integer : s)
+                System.out.print(integer + " ");
             System.out.println();
+            return;
         }
-        System.out.println("Enter sum : ");
-        sum=sc.nextInt();
-        set(a,sum);
+
+        if (n == 0)
+            return;
+
+        printAllSubsetsRecursively(array, n - 1, s, sum);
+        Vector<Integer> v1=new Vector<>(s);
+        v1.add(array[n - 1]);
+        printAllSubsetsRecursively(array, n - 1, v1, sum - array[n - 1]);
+    }
+
+    static void printAllSubsets(int[] array, int n, int sum)
+    {
+        Vector<Integer> s= new Vector<>();
+        printAllSubsetsRecursively(array, n, s, sum);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2,5,8,4,6,11};
+        int n = array.length;
+        int sum = 11;
+
+        printAllSubsets(array, n, sum);
     }
 }
+

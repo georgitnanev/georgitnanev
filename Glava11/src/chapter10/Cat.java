@@ -26,6 +26,7 @@ public class Cat {
             this.color = color;
         }
         public void sayMiau() {
+
             System.out.printf("Cat %s said: Miauuuuu!%n", name);
         }
         public static void main(String[] args) {

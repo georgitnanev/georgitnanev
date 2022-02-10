@@ -1,23 +1,56 @@
+import java.util.Scanner;
+
+
 
 
 public class Zadacha4 {
-    static void printSubsets(String[] set) {
-        int n = set.length;
 
-        for (int i = 0; i < (1 << n); i++) {
-            System.out.print("{ ");
 
-            for (int j = 0; j < n; j++)
 
-                if ((i & (1 << j)) > 0)
-                    System.out.print(set[j] + " ");
 
-            System.out.println("}");
+        static String[] strings, str;
+        static int length;
+
+        static void cycle ( int iter, int index, int k){
+            if (iter == k) {
+                for (int i = 0; i < length; i++)
+
+                    System.out.print("" + str[i]);
+                
+                return;
+
+            }
+
+
+            for (int i = index; i < strings.length; i++) {
+                str[iter] = strings[i];
+                cycle(iter + 1, i + 1, k);
+            }
+        }
+
+
+        public static void main (String[]args){
+
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Enter words length: ");
+            length = scanner.nextInt();
+
+            strings = new String[length];
+            System.out.println();
+
+            for (int i = 0; i < length; i++) {
+                System.out.println("Enter word: " + i + 1);
+                strings[i] = scanner.next();
+            }
+
+            for (int i = 0; i <= length; i++) {
+                str = new String[length];
+                cycle(0, 0, i);
+
+            }
         }
     }
-    public static void main(String[] args) {
-        String[] set = {"test", "rock", "fun"};
-        printSubsets(set);
 
-    }
-}
+
