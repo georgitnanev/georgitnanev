@@ -5,20 +5,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileParser {
-    static List<Integer>  readIntsFromTxtFile (String fileName) throws IOException, Zadacha10 {
-        var reader = new BufferedReader(new FileReader(fileName));
+    static List<Integer>  readIntsFromTextFile (String filename) throws IOException, FileParseException {
+        var reader = new BufferedReader(new FileReader(filename));
         List<Integer> ints = new ArrayList<Integer>();
-        int lineNumber = 0;
-        String line = "";
+        int line = 1;
+        String fileName = "";
 
         try {
 
-            while ((line = reader.readLine()) != null)
-                if (line.length() > 0)
-                    ints.add(Integer.parseInt(line));
-            lineNumber++;
+            while ((filename = reader.readLine()) != null)
+                if (filename.length() > 0)
+                    ints.add(Integer.parseInt(filename));
+            line++;
         } catch (Exception ex) {
-            throw new Zadacha10("Wrong file" + fileName, lineNumber, line);
+            throw new FileParseException ("Wrong file" + filename, fileName, line);
 
         } finally {
             reader.close();
