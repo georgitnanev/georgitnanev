@@ -5,22 +5,20 @@ public class Zadacha4 {
     static int length;
 
 
-    static void cycle(int iter, int index, int k) {
-        if (iter == k) {
+    static void cycle(int iteration, int index, int k) {
+        if (iteration == k) {
+            if (iteration != 0)
             for (int i = 0; i < length; i++)
                 System.out.print(" " + str[i]);
             return;
         }
+        for (int j = index; j < strings.length; j++) {
+            str[iteration] = strings[j];
+            cycle(iteration + 1, j + 1, k);
 
 
-            for (int i = index; i < strings.length; i++) {
-                str[iter] = strings[i];
-                cycle(iter + 1, i + 1, k);
             }
-
         }
-
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

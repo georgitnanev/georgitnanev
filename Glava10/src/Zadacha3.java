@@ -7,7 +7,7 @@ public class Zadacha3 {
         if (index >= array.length) {
             System.out.print("(");
             for (int j = 0; j < array.length; j++) {
-                System.out.print("" + wordsArray[array[j]] + " ");
+                System.out.print("" + wordsArray[array[j]] + "");
                 if (j != array.length - 1)
                     System.out.print(" ");
                 }
