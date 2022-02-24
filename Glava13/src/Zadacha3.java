@@ -23,9 +23,7 @@ public class Zadacha3 {
                 wordArr[j] = m.group();
                 tagsWord[j] = wordArr[j].substring(8, (wordArr[j].length() - 9));
             }
-            for (int j = 0; j < wordArr.length; j++) {
 
-            }
             String[] sentenceArr = word.split("(<upcase>).+?(</upcase>)");
             for(int j = 0; j < sentenceArr.length; j++) {
                 System.out.print(sentenceArr[j] + tagsWord[j].toUpperCase());

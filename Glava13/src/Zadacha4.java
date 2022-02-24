@@ -9,13 +9,13 @@ public class Zadacha4 {
         String text = scanner.nextLine();
         for (String bannedWord : bannedWords) {
             if (text.contains(bannedWord)) {
-                String replacement = "";
+                StringBuilder replacement = new StringBuilder();
                 for (int i = 0; i < bannedWord.length(); i++) {
-                    replacement += "*";
+                    replacement.append("*");
 
                 }
 
-                text = text.replace(bannedWord, replacement);
+                text = text.replace(bannedWord, replacement.toString());
             }
 
         }
