@@ -2,7 +2,7 @@
 public class Zadacha2 {
     public static void main(String[] args) {
 
-            int[] arrayOne = {1,2,3,4,5};
+            int[] arrayOne = {1,2,3,4};
             int[] arrayTwo = {1,2,3,4};
 
             boolean arraysEqual = true;

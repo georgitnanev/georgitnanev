@@ -24,6 +24,9 @@ class Graph {
             adjList.get(dest).add(src);
         }
     }
+
+    public void addEdge(int i, int i1) {
+    }
 }
 class Main {
     public static void recursiveBFS(Graph graph, Queue<Integer> q, boolean[] discovered) {

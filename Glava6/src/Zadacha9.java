@@ -5,11 +5,11 @@ public class Zadacha9 {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int sumNByTwo = n * 2;
-        int dividentFact = 1;
+        int divideFact = 1;
 
         for (int i = sumNByTwo; i > 1 ; i--) {
-            dividentFact *= i;
-            System.out.println("(2*n)! = " + dividentFact);
+            divideFact *= i;
+            System.out.println("(2*n)! = " + divideFact);
         }
 
             int dividerNPlusOne = n + 1;
@@ -25,7 +25,7 @@ public class Zadacha9 {
                 factN *= i;
                 System.out.println("n! = " +factN);
             }
-            int catalansNumber = dividentFact / (dividerNPlusOneFact * factN);
+            int catalansNumber = divideFact / (dividerNPlusOneFact * factN);
 
         System.out.println("CNumber= " +catalansNumber);
 

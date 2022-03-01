@@ -7,7 +7,7 @@ public class Zadacha10 {
         System.out.println("Enter N: ");
 
         int x = scanner.nextInt();
-        int array[][] = new int[x][x];
+        int[][] array = new int[x][x];
         int countRow = 0;
         for (int i = 0; i < x; i++) {
             countRow++;
