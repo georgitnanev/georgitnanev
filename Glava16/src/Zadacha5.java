@@ -25,8 +25,7 @@ public class Zadacha5 {
 
         BubbleSort s= new BubbleSort();
         ArrayList<Integer> arrayList=new ArrayList<>();
-        System.out.println("List of elements:");
-        System.out.println("Write 'STOP' when list is over. ");
+        System.out.println("List of elements and then write 'stop' : ");
         BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
         while(!(list=bf.readLine()).equalsIgnoreCase("stop")){
             int index =Integer.parseInt(list);
