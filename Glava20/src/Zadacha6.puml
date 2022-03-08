@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+ class Animal {
+ int age
+ String name
+ String gender
+ String produceSound()
+ }
+
+class Dog
+class Frog
+class Cat
+class Kitten
+class Tomcat
+
+Animal <|-- Dog
+Animal <|-- Frog
+Animal <|-- Cat
+Animal <|-- Kitten
+Animal <|-- Tomcat
+
+
+Dog<|-- PSVM
+Frog<|-- PSVM
+Cat<|-- PSVM
+Kitten<|-- PSVM
+Tomcat<|-- PSVM
+class PSVM {
+Object[] animals
+println(animals)
+}
+
+
+
+@enduml
